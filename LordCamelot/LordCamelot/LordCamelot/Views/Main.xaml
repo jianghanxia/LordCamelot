@@ -1,0 +1,159 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<TabbedPage xmlns="http://xamarin.com/schemas/2014/forms"
+            xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+            xmlns:prism="clr-namespace:Prism.Mvvm;assembly=Prism.Forms"
+            xmlns:iconize="clr-namespace:Plugin.Iconize;assembly=Plugin.Iconize"
+            xmlns:sylist="clr-namespace:Syncfusion.ListView.XForms;assembly=Syncfusion.SfListView.XForms"
+            xmlns:flv="clr-namespace:DLToolkit.Forms.Controls;assembly=DLToolkit.Forms.Controls.FlowListView"
+            prism:ViewModelLocator.AutowireViewModel="True"
+            x:Class="LordCamelot.Views.Main" Title="LordCamelot">
+    <ContentPage Title="账号">
+        <ContentPage.ToolbarItems>
+            <ToolbarItem Text="添加" Command="{Binding AddCommand}" />
+        </ContentPage.ToolbarItems>
+        <Frame Padding="2" Margin="3,3">
+            <sylist:SfListView x:Name="SfListView" ItemsSource="{Binding Path=Environment.Game}" SelectionMode="None" VerticalOptions="FillAndExpand" AutoFitMode="Height">
+                <sylist:SfListView.ItemTemplate>
+                    <DataTemplate>
+                        <Frame Padding="2,4" Margin="2">
+                            <StackLayout Spacing="0">
+                                <StackLayout Orientation="Horizontal">
+                                    <Label Text="{Binding Path=UserName}" VerticalOptions="Center" />
+                                    <Label Text="{Binding Path=UserGame.name}" VerticalOptions="Center" Margin="10,0,0,0" />
+                                    <Label Text="{Binding Path=UserGame.BaseAct}" VerticalOptions="Center" Margin="10,0,0,0" />
+                                    <Label Text="/" VerticalOptions="Center" />
+                                    <Label Text="{Binding Path=UserGame.actMax}" VerticalOptions="Center" />
+                                    <iconize:IconImage Icon="md-play-arrow" IconColor="Green" HeightRequest="32" WidthRequest="32" HorizontalOptions="EndAndExpand" Margin="0,0,10,0"
+                                                       IsVisible="{Binding IsNotStart}">
+                                        <iconize:IconImage.GestureRecognizers>
+                                            <TapGestureRecognizer Command="{Binding BindingContext.StartCommand, Source={x:Reference Name=SfListView}}" CommandParameter="{Binding}" />
+                                        </iconize:IconImage.GestureRecognizers>
+                                    </iconize:IconImage>
+                                    <iconize:IconImage Icon="md-stop" IconColor="Red" HeightRequest="32" WidthRequest="32" HorizontalOptions="EndAndExpand" Margin="0,0,10,0"
+                                                       IsVisible="{Binding IsStart}">
+                                        <iconize:IconImage.GestureRecognizers>
+                                            <TapGestureRecognizer Command="{Binding BindingContext.StopCommand, Source={x:Reference Name=SfListView}}" CommandParameter="{Binding}" />
+                                        </iconize:IconImage.GestureRecognizers>
+                                    </iconize:IconImage>
+                                </StackLayout>
+                                <StackLayout Orientation="Horizontal">
+                                    <Label Text="{Binding Path=UserGame.lv, StringFormat='Lv:{0}'}" VerticalOptions="Center" />
+                                    <Label Text="{Binding Path=UserGame.stone, StringFormat='圣晶石:{0}'}" VerticalOptions="Center" Margin="10,0,0,0" />
+                                    <Label Text="{Binding Path=Servant.Count, StringFormat='从者:{0}'}" VerticalOptions="Center" Margin="10,0,0,0" />
+                                    <Label Text="{Binding Path=RitualDress.Count, StringFormat='礼装:{0}'}" VerticalOptions="Center" Margin="10,0,0,0" />
+                                    <Label Text="{Binding Path=PresentBox.Count, StringFormat='邮件:{0}'}" VerticalOptions="Center" Margin="10,0,0,0" />
+                                </StackLayout>
+                                <StackLayout Orientation="Horizontal">
+                                    <Label Text="{Binding Path=UserGame.qp, StringFormat='QP:{0}'}" VerticalOptions="Center" />
+                                    <Label Text="{Binding Path=UserGame.friendPoint, StringFormat='友情点:{0}'}" VerticalOptions="Center" Margin="10,0,0,0" />
+                                    <iconize:IconImage Icon="md-autorenew" IconColor="DodgerBlue" HeightRequest="32" WidthRequest="32" HorizontalOptions="EndAndExpand" Margin="0,0,10,0" 
+                                                       IsVisible="{Binding IsStart}">
+                                        <iconize:IconImage.GestureRecognizers>
+                                            <TapGestureRecognizer Command="{Binding BindingContext.StartCommand, Source={x:Reference Name=SfListView}}" CommandParameter="{Binding}" />
+                                        </iconize:IconImage.GestureRecognizers>
+                                    </iconize:IconImage>
+                                </StackLayout>
+                            </StackLayout>
+                        </Frame>
+                    </DataTemplate>
+                </sylist:SfListView.ItemTemplate>
+            </sylist:SfListView>
+        </Frame>
+    </ContentPage>
+
+    <ContentPage Title="任务">
+        <StackLayout Spacing="0">
+            <StackLayout Orientation="Horizontal" HorizontalOptions="FillAndExpand">
+                <Label Text="账号：" VerticalOptions="Center" />
+                <Picker ItemsSource="{Binding Path=Environment.Game}" ItemDisplayBinding="{Binding UserName}" SelectedItem="{Binding SelectGame}" HorizontalOptions="FillAndExpand" />
+            </StackLayout>
+            <Frame Padding="2" Margin="3,3">
+                <StackLayout Spacing="0">
+                    <StackLayout Orientation="Horizontal" HorizontalOptions="FillAndExpand">
+                        <Label Text="编队：" VerticalOptions="Center" />
+                        <Picker ItemsSource="{Binding Path=SelectGame.Deck}" ItemDisplayBinding="{Binding name}" SelectedItem="{Binding SelectDeck}" HorizontalOptions="FillAndExpand" />
+                    </StackLayout>
+                    <flv:FlowListView FlowItemsSource="{Binding Path=SelectDeck.Svt}" FlowColumnCount="5" HasUnevenRows="True" HeightRequest="90">
+                        <flv:FlowListView.FlowColumnTemplate>
+                            <DataTemplate>
+                                <Frame Margin="1" Padding="1">
+                                    <StackLayout>
+                                        <Image Source="{Binding Pic}" />
+                                        <Label Text="{Binding Name}" LineBreakMode="NoWrap" FontSize="9" />
+                                        <StackLayout Orientation="Horizontal">
+                                            <Label Text="{Binding Path=Servant.lv}" FontSize="12" />
+                                            <Label Text="{Binding Path=ClassName}" FontSize="10" HorizontalOptions="EndAndExpand" />
+                                        </StackLayout>
+                                    </StackLayout>
+                                </Frame>
+                            </DataTemplate>
+                        </flv:FlowListView.FlowColumnTemplate>
+                    </flv:FlowListView>
+                    <StackLayout Orientation="Horizontal" HorizontalOptions="FillAndExpand">
+                        <Picker WidthRequest="60" ItemsSource="{Binding WarList}" SelectedIndexChanged="QuestType_OnSelectedIndexChanged" />
+                        <Picker ItemsSource="{Binding Path=QuestList}" ItemDisplayBinding="{Binding Name}" SelectedItem="{Binding SelectQuest}" HorizontalOptions="FillAndExpand" 
+                                SelectedIndexChanged="Picker_OnSelectedIndexChanged" />
+                    </StackLayout>
+                    <StackLayout Orientation="Horizontal" HorizontalOptions="FillAndExpand">
+                        <Label Text="{Binding QuestPhase}" VerticalOptions="Center" FontSize="18" />
+                        <Stepper Minimum="1" Maximum="{Binding MaxQuestPhase}" Value="{Binding QuestPhase}" IsVisible="{Binding IsQuestPhase}" Margin="10,0,0,0" />
+                        <iconize:IconImage Icon="md-play-arrow" IconColor="MediumBlue" HeightRequest="32" WidthRequest="32" VerticalOptions="Center" HorizontalOptions="EndAndExpand">
+                            <iconize:IconImage.GestureRecognizers>
+                                <TapGestureRecognizer Command="{Binding BeginCommand}" />
+                            </iconize:IconImage.GestureRecognizers>
+                        </iconize:IconImage>
+                        <iconize:IconImage Icon="md-fast-forward" IconColor="MediumBlue" HeightRequest="32" WidthRequest="32" VerticalOptions="Center" Margin="20,0,0,0">
+                            <iconize:IconImage.GestureRecognizers>
+                                <TapGestureRecognizer Command="{Binding BeginAllCommand}" />
+                            </iconize:IconImage.GestureRecognizers>
+                        </iconize:IconImage>
+                    </StackLayout>
+                </StackLayout>
+            </Frame>
+            <Frame Padding="2" Margin="3,3">
+                <StackLayout>
+                    <StackLayout Orientation="Horizontal" HorizontalOptions="FillAndExpand">
+                        <Label Text="友情池" VerticalOptions="Center" />
+                        <iconize:IconImage Icon="md-directions-walk" IconColor="DarkGoldenrod"  HeightRequest="32" WidthRequest="32" VerticalOptions="Center">
+                            <iconize:IconImage.GestureRecognizers>
+                                <TapGestureRecognizer Command="{Binding GachaCommand}" />
+                            </iconize:IconImage.GestureRecognizers>
+                        </iconize:IconImage>
+                        <Label Text="回体力：" VerticalOptions="Center" Margin="20,0,0,0"/>
+                        <Picker WidthRequest="70" SelectedIndex="{Binding SelectAPFunc}">
+                            <Picker.Items>
+                                <x:String>石头</x:String>
+                                <x:String>金苹果</x:String>
+                                <x:String>银苹果</x:String>
+                                <x:String>铜苹果</x:String>
+                            </Picker.Items>
+                        </Picker>
+                        <iconize:IconImage Icon="md-local-gas-station" IconColor="DarkOrange"  HeightRequest="32" WidthRequest="32" VerticalOptions="Center" Margin="10,0,0,0">
+                            <iconize:IconImage.GestureRecognizers>
+                                <TapGestureRecognizer Command="{Binding APCommand}" />
+                            </iconize:IconImage.GestureRecognizers>
+                        </iconize:IconImage>
+                    </StackLayout>
+                    <StackLayout Orientation="Horizontal" HorizontalOptions="FillAndExpand">
+                        <Label Text="卖垃圾" VerticalOptions="Center" />
+                        <iconize:IconImage Icon="md-delete" IconColor="DarkGoldenrod"  HeightRequest="32" WidthRequest="32" VerticalOptions="Center">
+                            <iconize:IconImage.GestureRecognizers>
+                                <TapGestureRecognizer Command="{Binding SellCommand}" />
+                            </iconize:IconImage.GestureRecognizers>
+                        </iconize:IconImage>
+                    </StackLayout>
+                </StackLayout>
+            </Frame>
+            <Label Text="任务：" VerticalOptions="Center" />
+            <Label Text="{Binding Path=Environment.BattleTask.Count}" VerticalOptions="Center" />
+        </StackLayout>
+    </ContentPage>
+
+    <ContentPage Title="日志">
+        <Frame Padding="2" Margin="3,3">
+            <ScrollView VerticalOptions="Fill">
+                <Label Text="{Binding Path=Environment.Log}" LineBreakMode="CharacterWrap" />
+            </ScrollView>
+        </Frame>
+    </ContentPage>
+</TabbedPage>

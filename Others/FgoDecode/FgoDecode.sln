@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 15
+VisualStudioVersion = 15.0.27428.2027
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FgoDecode", "FgoDecode\FgoDecode.csproj", "{769E7842-91B2-4789-99D6-3469A40C6053}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Protobuf", "Protobuf\Protobuf.csproj", "{6915CF61-DEEC-4494-A035-2D3B90A3938E}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{769E7842-91B2-4789-99D6-3469A40C6053}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{769E7842-91B2-4789-99D6-3469A40C6053}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{769E7842-91B2-4789-99D6-3469A40C6053}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{769E7842-91B2-4789-99D6-3469A40C6053}.Release|Any CPU.Build.0 = Release|Any CPU
+		{6915CF61-DEEC-4494-A035-2D3B90A3938E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{6915CF61-DEEC-4494-A035-2D3B90A3938E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{6915CF61-DEEC-4494-A035-2D3B90A3938E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{6915CF61-DEEC-4494-A035-2D3B90A3938E}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {2CC18026-3DC7-4893-8C97-D22A6DFB34D7}
+	EndGlobalSection
+EndGlobal

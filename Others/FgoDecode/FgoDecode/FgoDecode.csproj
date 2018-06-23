@@ -1,0 +1,497 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="14.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{769E7842-91B2-4789-99D6-3469A40C6053}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>FgoDecode</RootNamespace>
+    <AssemblyName>FgoDecode</AssemblyName>
+    <TargetFrameworkVersion>v4.5.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Google.Protobuf">
+      <HintPath>.\Google.Protobuf.dll</HintPath>
+    </Reference>
+    <Reference Include="ICSharpCode.SharpZipLib">
+      <HintPath>.\ICSharpCode.SharpZipLib.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Crc32.cs" />
+    <Compile Include="DataManager.cs" />
+    <Compile Include="Debug.cs" />
+    <Compile Include="Form1.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form1.Designer.cs">
+      <DependentUpon>Form1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ManagerConfig.cs" />
+    <Compile Include="MdcStr.cs" />
+    <Compile Include="PlayerPrefs.cs" />
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="ResDataManager.cs" />
+    <Compile Include="SingletonMonoBehaviour.cs" />
+    <Compile Include="UFramework\MstAiActReflection.cs" />
+    <Compile Include="UFramework\MstAiFieldReflection.cs" />
+    <Compile Include="UFramework\MstAiReflection.cs" />
+    <Compile Include="UFramework\MstAttriRelationReflection.cs" />
+    <Compile Include="UFramework\MstBankShopReflection.cs" />
+    <Compile Include="UFramework\MstBannerReflection.cs" />
+    <Compile Include="UFramework\MstBattleBgReflection.cs" />
+    <Compile Include="UFramework\MstBgmReflection.cs" />
+    <Compile Include="UFramework\MstBoxGachaBaseDetailReflection.cs" />
+    <Compile Include="UFramework\MstBoxGachaBaseReflection.cs" />
+    <Compile Include="UFramework\MstBoxGachaReflection.cs" />
+    <Compile Include="UFramework\MstBoxGachaTalkReflection.cs" />
+    <Compile Include="UFramework\MstBuffReflection.cs" />
+    <Compile Include="UFramework\MstCardReflection.cs" />
+    <Compile Include="UFramework\MstClassReflection.cs" />
+    <Compile Include="UFramework\MstClassRelationReflection.cs" />
+    <Compile Include="UFramework\MstClosedMessageReflection.cs" />
+    <Compile Include="UFramework\MstCombineLimitReflection.cs" />
+    <Compile Include="UFramework\MstCombineMaterialReflection.cs" />
+    <Compile Include="UFramework\MstCombineQpReflection.cs" />
+    <Compile Include="UFramework\MstCombineQpSvtEquipReflection.cs" />
+    <Compile Include="UFramework\MstCombineReflection.cs" />
+    <Compile Include="UFramework\MstCombineSkillReflection.cs" />
+    <Compile Include="UFramework\MstCommandSpellReflection.cs" />
+    <Compile Include="UFramework\MstConstantReflection.cs" />
+    <Compile Include="UFramework\MstConstantStrReflection.cs" />
+    <Compile Include="UFramework\MstCvReflection.cs" />
+    <Compile Include="UFramework\MstDataReflection.cs" />
+    <Compile Include="UFramework\MstEffectReflection.cs" />
+    <Compile Include="UFramework\MstEquipExpReflection.cs" />
+    <Compile Include="UFramework\MstEquipImageReflection.cs" />
+    <Compile Include="UFramework\MstEquipReflection.cs" />
+    <Compile Include="UFramework\MstEquipSkillReflection.cs" />
+    <Compile Include="UFramework\MstEventCampaignReflection.cs" />
+    <Compile Include="UFramework\MstEventDetailReflection.cs" />
+    <Compile Include="UFramework\MstEventFilterReflection.cs" />
+    <Compile Include="UFramework\MstEventItemDisplayGroupReflection.cs" />
+    <Compile Include="UFramework\MstEventItemDisplayReflection.cs" />
+    <Compile Include="UFramework\MstEventItemDisplayReleaseReflection.cs" />
+    <Compile Include="UFramework\MstEventLoginBonusReflection.cs" />
+    <Compile Include="UFramework\MstEventLoginCampaignReflection.cs" />
+    <Compile Include="UFramework\MstEventMissionActionReflection.cs" />
+    <Compile Include="UFramework\MstEventMissionConditionDetReflection.cs" />
+    <Compile Include="UFramework\MstEventMissionConditionReflection.cs" />
+    <Compile Include="UFramework\MstEventMissionReflection.cs" />
+    <Compile Include="UFramework\MstEventQuestReflection.cs" />
+    <Compile Include="UFramework\MstEventReflection.cs" />
+    <Compile Include="UFramework\MstEventRewardBgReflection.cs" />
+    <Compile Include="UFramework\MstEventRewardReflection.cs" />
+    <Compile Include="UFramework\MstEventRewardSetReflection.cs" />
+    <Compile Include="UFramework\MstEventSuperBossReflection.cs" />
+    <Compile Include="UFramework\MstEventSvtReflection.cs" />
+    <Compile Include="UFramework\MstEventTutorialReflection.cs" />
+    <Compile Include="UFramework\MstFriendshipReflection.cs" />
+    <Compile Include="UFramework\MstFuncGroupReflection.cs" />
+    <Compile Include="UFramework\MstFuncReflection.cs" />
+    <Compile Include="UFramework\MstGachaAdjustReflection.cs" />
+    <Compile Include="UFramework\MstGachaBaseReflection.cs" />
+    <Compile Include="UFramework\MstGachaBonusReflection.cs" />
+    <Compile Include="UFramework\MstGachaReflection.cs" />
+    <Compile Include="UFramework\MstGameIllustrationReflection.cs" />
+    <Compile Include="UFramework\MstGiftReflection.cs" />
+    <Compile Include="UFramework\MstGuideReflection.cs" />
+    <Compile Include="UFramework\MstHeroineReflection.cs" />
+    <Compile Include="UFramework\MstIllustratorReflection.cs" />
+    <Compile Include="UFramework\MstItemReflection.cs" />
+    <Compile Include="UFramework\MstMapGimmickReflection.cs" />
+    <Compile Include="UFramework\MstMasterMissionDisplayInfoReflection.cs" />
+    <Compile Include="UFramework\MstMasterMissionReflection.cs" />
+    <Compile Include="UFramework\MstMissionReflection.cs" />
+    <Compile Include="UFramework\MstPresentMessageReflection.cs" />
+    <Compile Include="UFramework\MstQuestConsumeItemReflection.cs" />
+    <Compile Include="UFramework\MstQuestGroupReflection.cs" />
+    <Compile Include="UFramework\MstQuestMessageReflection.cs" />
+    <Compile Include="UFramework\MstQuestPhaseDetailReflection.cs" />
+    <Compile Include="UFramework\MstQuestPhaseReflection.cs" />
+    <Compile Include="UFramework\MstQuestReflection.cs" />
+    <Compile Include="UFramework\MstQuestReleaseReflection.cs" />
+    <Compile Include="UFramework\MstQuestResetReflection.cs" />
+    <Compile Include="UFramework\MstQuestRestrictionReflection.cs" />
+    <Compile Include="UFramework\MstQuestScriptReflection.cs" />
+    <Compile Include="UFramework\MstQuestScriptReleaseReflection.cs" />
+    <Compile Include="UFramework\MstRecoverReflection.cs" />
+    <Compile Include="UFramework\MstRestrictionReflection.cs" />
+    <Compile Include="UFramework\MstSetItemReflection.cs" />
+    <Compile Include="UFramework\MstShopDetailReflection.cs" />
+    <Compile Include="UFramework\MstShopReflection.cs" />
+    <Compile Include="UFramework\MstShopReleaseReflection.cs" />
+    <Compile Include="UFramework\MstShopScriptReflection.cs" />
+    <Compile Include="UFramework\MstSkillDetailReflection.cs" />
+    <Compile Include="UFramework\MstSkillLvReflection.cs" />
+    <Compile Include="UFramework\MstSkillReflection.cs" />
+    <Compile Include="UFramework\MstSpotImageReflection.cs" />
+    <Compile Include="UFramework\MstSpotReflection.cs" />
+    <Compile Include="UFramework\MstSpotRoadReflection.cs" />
+    <Compile Include="UFramework\MstStageReflection.cs" />
+    <Compile Include="UFramework\MstStoneShopReflection.cs" />
+    <Compile Include="UFramework\MstSvtCardReflection.cs" />
+    <Compile Include="UFramework\MstSvtCommentAddReflection.cs" />
+    <Compile Include="UFramework\MstSvtCommentReflection.cs" />
+    <Compile Include="UFramework\MstSvtExceedReflection.cs" />
+    <Compile Include="UFramework\MstSvtExpReflection.cs" />
+    <Compile Include="UFramework\MstSvtGroupReflection.cs" />
+    <Compile Include="UFramework\MstSvtLimitAddReflection.cs" />
+    <Compile Include="UFramework\MstSvtLimitReflection.cs" />
+    <Compile Include="UFramework\MstSvtPassiveSkillReflection.cs" />
+    <Compile Include="UFramework\MstSvtProfileReflection.cs" />
+    <Compile Include="UFramework\MstSvtRarityReflection.cs" />
+    <Compile Include="UFramework\MstSvtReflection.cs" />
+    <Compile Include="UFramework\MstSvtScriptAddReflection.cs" />
+    <Compile Include="UFramework\MstSvtScriptReflection.cs" />
+    <Compile Include="UFramework\MstSvtSkillReflection.cs" />
+    <Compile Include="UFramework\MstSvtTreasureDeviceReflection.cs" />
+    <Compile Include="UFramework\MstSvtVoiceReflection.cs" />
+    <Compile Include="UFramework\MstSvtVoiceRelationReflection.cs" />
+    <Compile Include="UFramework\MstTipsReflection.cs" />
+    <Compile Include="UFramework\MstTotalLoginReflection.cs" />
+    <Compile Include="UFramework\MstTreasureDeviceDetailReflection.cs" />
+    <Compile Include="UFramework\MstTreasureDeviceLvReflection.cs" />
+    <Compile Include="UFramework\MstTreasureDeviceReflection.cs" />
+    <Compile Include="UFramework\MstUserExpReflection.cs" />
+    <Compile Include="UFramework\MstUserTremReflection.cs" />
+    <Compile Include="UFramework\MstVoiceReflection.cs" />
+    <Compile Include="UFramework\MstVoiceReleaseReflection.cs" />
+    <Compile Include="UFramework\MstWarBgmReflection.cs" />
+    <Compile Include="UFramework\MstWarReflection.cs" />
+    <Compile Include="UFramework\MST_AI.cs" />
+    <Compile Include="UFramework\MST_AI_ACT.cs" />
+    <Compile Include="UFramework\MST_AI_ACT_ARRAY.cs" />
+    <Compile Include="UFramework\MST_AI_ARRAY.cs" />
+    <Compile Include="UFramework\MST_AI_FIELD.cs" />
+    <Compile Include="UFramework\MST_AI_FIELD_ARRAY.cs" />
+    <Compile Include="UFramework\MST_ATTRI_RELATION.cs" />
+    <Compile Include="UFramework\MST_ATTRI_RELATION_ARRAY.cs" />
+    <Compile Include="UFramework\MST_BANK_SHOP.cs" />
+    <Compile Include="UFramework\MST_BANK_SHOP_ARRAY.cs" />
+    <Compile Include="UFramework\MST_BANNER.cs" />
+    <Compile Include="UFramework\MST_BANNER_ARRAY.cs" />
+    <Compile Include="UFramework\MST_BATTLE_BG.cs" />
+    <Compile Include="UFramework\MST_BATTLE_BG_ARRAY.cs" />
+    <Compile Include="UFramework\MST_BGM.cs" />
+    <Compile Include="UFramework\MST_BGM_ARRAY.cs" />
+    <Compile Include="UFramework\MST_BOX_GACHA.cs" />
+    <Compile Include="UFramework\MST_BOX_GACHA_ARRAY.cs" />
+    <Compile Include="UFramework\MST_BOX_GACHA_BASE.cs" />
+    <Compile Include="UFramework\MST_BOX_GACHA_BASE_ARRAY.cs" />
+    <Compile Include="UFramework\MST_BOX_GACHA_BASE_DETAIL.cs" />
+    <Compile Include="UFramework\MST_BOX_GACHA_BASE_DETAIL_ARRAY.cs" />
+    <Compile Include="UFramework\MST_BOX_GACHA_TALK.cs" />
+    <Compile Include="UFramework\MST_BOX_GACHA_TALK_ARRAY.cs" />
+    <Compile Include="UFramework\MST_BUFF.cs" />
+    <Compile Include="UFramework\MST_BUFF_ARRAY.cs" />
+    <Compile Include="UFramework\MST_CARD.cs" />
+    <Compile Include="UFramework\MST_CARD_ARRAY.cs" />
+    <Compile Include="UFramework\MST_CLASS.cs" />
+    <Compile Include="UFramework\MST_CLASS_ARRAY.cs" />
+    <Compile Include="UFramework\MST_CLASS_RELATION.cs" />
+    <Compile Include="UFramework\MST_CLASS_RELATION_ARRAY.cs" />
+    <Compile Include="UFramework\MST_CLOSED_MESSAGE.cs" />
+    <Compile Include="UFramework\MST_CLOSED_MESSAGE_ARRAY.cs" />
+    <Compile Include="UFramework\MST_COMBINE.cs" />
+    <Compile Include="UFramework\MST_COMBINE_ARRAY.cs" />
+    <Compile Include="UFramework\MST_COMBINE_LIMIT.cs" />
+    <Compile Include="UFramework\MST_COMBINE_LIMIT_ARRAY.cs" />
+    <Compile Include="UFramework\MST_COMBINE_MATERIAL.cs" />
+    <Compile Include="UFramework\MST_COMBINE_MATERIAL_ARRAY.cs" />
+    <Compile Include="UFramework\MST_COMBINE_QP.cs" />
+    <Compile Include="UFramework\MST_COMBINE_QP_ARRAY.cs" />
+    <Compile Include="UFramework\MST_COMBINE_QP_SVT_EQUIP.cs" />
+    <Compile Include="UFramework\MST_COMBINE_QP_SVT_EQUIP_ARRAY.cs" />
+    <Compile Include="UFramework\MST_COMBINE_SKILL.cs" />
+    <Compile Include="UFramework\MST_COMBINE_SKILL_ARRAY.cs" />
+    <Compile Include="UFramework\MST_COMMAND_SPELL.cs" />
+    <Compile Include="UFramework\MST_COMMAND_SPELL_ARRAY.cs" />
+    <Compile Include="UFramework\MST_CONSTANT.cs" />
+    <Compile Include="UFramework\MST_CONSTANT_ARRAY.cs" />
+    <Compile Include="UFramework\MST_CONSTANT_STR.cs" />
+    <Compile Include="UFramework\MST_CONSTANT_STR_ARRAY.cs" />
+    <Compile Include="UFramework\MST_CV.cs" />
+    <Compile Include="UFramework\MST_CV_ARRAY.cs" />
+    <Compile Include="UFramework\MST_DATA.cs" />
+    <Compile Include="UFramework\MST_DATA_ARRAY.cs" />
+    <Compile Include="UFramework\MST_EFFECT.cs" />
+    <Compile Include="UFramework\MST_EFFECT_ARRAY.cs" />
+    <Compile Include="UFramework\MST_EQUIP.cs" />
+    <Compile Include="UFramework\MST_EQUIP_ARRAY.cs" />
+    <Compile Include="UFramework\MST_EQUIP_EXP.cs" />
+    <Compile Include="UFramework\MST_EQUIP_EXP_ARRAY.cs" />
+    <Compile Include="UFramework\MST_EQUIP_IMAGE.cs" />
+    <Compile Include="UFramework\MST_EQUIP_IMAGE_ARRAY.cs" />
+    <Compile Include="UFramework\MST_EQUIP_SKILL.cs" />
+    <Compile Include="UFramework\MST_EQUIP_SKILL_ARRAY.cs" />
+    <Compile Include="UFramework\MST_EVENT.cs" />
+    <Compile Include="UFramework\MST_EVENT_ARRAY.cs" />
+    <Compile Include="UFramework\MST_EVENT_CAMPAIGN.cs" />
+    <Compile Include="UFramework\MST_EVENT_CAMPAIGN_ARRAY.cs" />
+    <Compile Include="UFramework\MST_EVENT_DETAIL.cs" />
+    <Compile Include="UFramework\MST_EVENT_DETAIL_ARRAY.cs" />
+    <Compile Include="UFramework\MST_EVENT_FILTER.cs" />
+    <Compile Include="UFramework\MST_EVENT_FILTER_ARRAY.cs" />
+    <Compile Include="UFramework\MST_EVENT_ITEM_DISPLAY.cs" />
+    <Compile Include="UFramework\MST_EVENT_ITEM_DISPLAY_ARRAY.cs" />
+    <Compile Include="UFramework\MST_EVENT_ITEM_DISPLAY_GROUP.cs" />
+    <Compile Include="UFramework\MST_EVENT_ITEM_DISPLAY_GROUP_ARRAY.cs" />
+    <Compile Include="UFramework\MST_EVENT_ITEM_DISPLAY_RELEASE.cs" />
+    <Compile Include="UFramework\MST_EVENT_ITEM_DISPLAY_RELEASE_ARRAY.cs" />
+    <Compile Include="UFramework\MST_EVENT_LOGIN_BONUS.cs" />
+    <Compile Include="UFramework\MST_EVENT_LOGIN_BONUS_ARRAY.cs" />
+    <Compile Include="UFramework\MST_EVENT_LOGIN_CAMPAIGN.cs" />
+    <Compile Include="UFramework\MST_EVENT_LOGIN_CAMPAIGN_ARRAY.cs" />
+    <Compile Include="UFramework\MST_EVENT_MISSION.cs" />
+    <Compile Include="UFramework\MST_EVENT_MISSION_ACTION.cs" />
+    <Compile Include="UFramework\MST_EVENT_MISSION_ACTION_ARRAY.cs" />
+    <Compile Include="UFramework\MST_EVENT_MISSION_ARRAY.cs" />
+    <Compile Include="UFramework\MST_EVENT_MISSION_CONDITION.cs" />
+    <Compile Include="UFramework\MST_EVENT_MISSION_CONDITION_ARRAY.cs" />
+    <Compile Include="UFramework\MST_EVENT_MISSION_CONDITION_DET.cs" />
+    <Compile Include="UFramework\MST_EVENT_MISSION_CONDITION_DET_ARRAY.cs" />
+    <Compile Include="UFramework\MST_EVENT_QUEST.cs" />
+    <Compile Include="UFramework\MST_EVENT_QUEST_ARRAY.cs" />
+    <Compile Include="UFramework\MST_EVENT_REWARD.cs" />
+    <Compile Include="UFramework\MST_EVENT_REWARD_ARRAY.cs" />
+    <Compile Include="UFramework\MST_EVENT_REWARD_BG.cs" />
+    <Compile Include="UFramework\MST_EVENT_REWARD_BG_ARRAY.cs" />
+    <Compile Include="UFramework\MST_EVENT_REWARD_SET.cs" />
+    <Compile Include="UFramework\MST_EVENT_REWARD_SET_ARRAY.cs" />
+    <Compile Include="UFramework\MST_EVENT_SUPER_BOSS.cs" />
+    <Compile Include="UFramework\MST_EVENT_SUPER_BOSS_ARRAY.cs" />
+    <Compile Include="UFramework\MST_EVENT_SVT.cs" />
+    <Compile Include="UFramework\MST_EVENT_SVT_ARRAY.cs" />
+    <Compile Include="UFramework\MST_EVENT_TUTORIAL.cs" />
+    <Compile Include="UFramework\MST_EVENT_TUTORIAL_ARRAY.cs" />
+    <Compile Include="UFramework\MST_FRIENDSHIP.cs" />
+    <Compile Include="UFramework\MST_FRIENDSHIP_ARRAY.cs" />
+    <Compile Include="UFramework\MST_FUNC.cs" />
+    <Compile Include="UFramework\MST_FUNC_ARRAY.cs" />
+    <Compile Include="UFramework\MST_FUNC_GROUP.cs" />
+    <Compile Include="UFramework\MST_FUNC_GROUP_ARRAY.cs" />
+    <Compile Include="UFramework\MST_GACHA.cs" />
+    <Compile Include="UFramework\MST_GACHA_ADJUST.cs" />
+    <Compile Include="UFramework\MST_GACHA_ADJUST_ARRAY.cs" />
+    <Compile Include="UFramework\MST_GACHA_ARRAY.cs" />
+    <Compile Include="UFramework\MST_GACHA_BASE.cs" />
+    <Compile Include="UFramework\MST_GACHA_BASE_ARRAY.cs" />
+    <Compile Include="UFramework\MST_GACHA_BONUS.cs" />
+    <Compile Include="UFramework\MST_GACHA_BONUS_ARRAY.cs" />
+    <Compile Include="UFramework\MST_GAME_ILLUSTRATION.cs" />
+    <Compile Include="UFramework\MST_GAME_ILLUSTRATION_ARRAY.cs" />
+    <Compile Include="UFramework\MST_GIFT.cs" />
+    <Compile Include="UFramework\MST_GIFT_ARRAY.cs" />
+    <Compile Include="UFramework\MST_GUIDE.cs" />
+    <Compile Include="UFramework\MST_GUIDE_ARRAY.cs" />
+    <Compile Include="UFramework\MST_HEROINE.cs" />
+    <Compile Include="UFramework\MST_HEROINE_ARRAY.cs" />
+    <Compile Include="UFramework\MST_ILLUSTRATOR.cs" />
+    <Compile Include="UFramework\MST_ILLUSTRATOR_ARRAY.cs" />
+    <Compile Include="UFramework\MST_ITEM.cs" />
+    <Compile Include="UFramework\MST_ITEM_ARRAY.cs" />
+    <Compile Include="UFramework\MST_MAP_GIMMICK.cs" />
+    <Compile Include="UFramework\MST_MAP_GIMMICK_ARRAY.cs" />
+    <Compile Include="UFramework\MST_MASTER_MISSION.cs" />
+    <Compile Include="UFramework\MST_MASTER_MISSION_ARRAY.cs" />
+    <Compile Include="UFramework\MST_MASTER_MISSION_DISPLAY_INFO.cs" />
+    <Compile Include="UFramework\MST_MASTER_MISSION_DISPLAY_INFO_ARRAY.cs" />
+    <Compile Include="UFramework\MST_MISSION.cs" />
+    <Compile Include="UFramework\MST_MISSION_ARRAY.cs" />
+    <Compile Include="UFramework\MST_PRESENT_MESSAGE.cs" />
+    <Compile Include="UFramework\MST_PRESENT_MESSAGE_ARRAY.cs" />
+    <Compile Include="UFramework\MST_QUEST.cs" />
+    <Compile Include="UFramework\MST_QUEST_ARRAY.cs" />
+    <Compile Include="UFramework\MST_QUEST_CONSUME_ITEM.cs" />
+    <Compile Include="UFramework\MST_QUEST_CONSUME_ITEM_ARRAY.cs" />
+    <Compile Include="UFramework\MST_QUEST_GROUP.cs" />
+    <Compile Include="UFramework\MST_QUEST_GROUP_ARRAY.cs" />
+    <Compile Include="UFramework\MST_QUEST_MESSAGE.cs" />
+    <Compile Include="UFramework\MST_QUEST_MESSAGE_ARRAY.cs" />
+    <Compile Include="UFramework\MST_QUEST_PHASE.cs" />
+    <Compile Include="UFramework\MST_QUEST_PHASE_ARRAY.cs" />
+    <Compile Include="UFramework\MST_QUEST_PHASE_DETAIL.cs" />
+    <Compile Include="UFramework\MST_QUEST_PHASE_DETAIL_ARRAY.cs" />
+    <Compile Include="UFramework\MST_QUEST_RELEASE.cs" />
+    <Compile Include="UFramework\MST_QUEST_RELEASE_ARRAY.cs" />
+    <Compile Include="UFramework\MST_QUEST_RESET.cs" />
+    <Compile Include="UFramework\MST_QUEST_RESET_ARRAY.cs" />
+    <Compile Include="UFramework\MST_QUEST_RESTRICTION.cs" />
+    <Compile Include="UFramework\MST_QUEST_RESTRICTION_ARRAY.cs" />
+    <Compile Include="UFramework\MST_QUEST_SCRIPT.cs" />
+    <Compile Include="UFramework\MST_QUEST_SCRIPT_ARRAY.cs" />
+    <Compile Include="UFramework\MST_QUEST_SCRIPT_RELEASE.cs" />
+    <Compile Include="UFramework\MST_QUEST_SCRIPT_RELEASE_ARRAY.cs" />
+    <Compile Include="UFramework\MST_RECOVER.cs" />
+    <Compile Include="UFramework\MST_RECOVER_ARRAY.cs" />
+    <Compile Include="UFramework\MST_RESTRICTION.cs" />
+    <Compile Include="UFramework\MST_RESTRICTION_ARRAY.cs" />
+    <Compile Include="UFramework\MST_SET_ITEM.cs" />
+    <Compile Include="UFramework\MST_SET_ITEM_ARRAY.cs" />
+    <Compile Include="UFramework\MST_SHOP.cs" />
+    <Compile Include="UFramework\MST_SHOP_ARRAY.cs" />
+    <Compile Include="UFramework\MST_SHOP_DETAIL.cs" />
+    <Compile Include="UFramework\MST_SHOP_DETAIL_ARRAY.cs" />
+    <Compile Include="UFramework\MST_SHOP_RELEASE.cs" />
+    <Compile Include="UFramework\MST_SHOP_RELEASE_ARRAY.cs" />
+    <Compile Include="UFramework\MST_SHOP_SCRIPT.cs" />
+    <Compile Include="UFramework\MST_SHOP_SCRIPT_ARRAY.cs" />
+    <Compile Include="UFramework\MST_SKILL.cs" />
+    <Compile Include="UFramework\MST_SKILL_ARRAY.cs" />
+    <Compile Include="UFramework\MST_SKILL_DETAIL.cs" />
+    <Compile Include="UFramework\MST_SKILL_DETAIL_ARRAY.cs" />
+    <Compile Include="UFramework\MST_SKILL_LV.cs" />
+    <Compile Include="UFramework\MST_SKILL_LV_ARRAY.cs" />
+    <Compile Include="UFramework\MST_SPOT.cs" />
+    <Compile Include="UFramework\MST_SPOT_ARRAY.cs" />
+    <Compile Include="UFramework\MST_SPOT_IMAGE.cs" />
+    <Compile Include="UFramework\MST_SPOT_IMAGE_ARRAY.cs" />
+    <Compile Include="UFramework\MST_SPOT_ROAD.cs" />
+    <Compile Include="UFramework\MST_SPOT_ROAD_ARRAY.cs" />
+    <Compile Include="UFramework\MST_STAGE.cs" />
+    <Compile Include="UFramework\MST_STAGE_ARRAY.cs" />
+    <Compile Include="UFramework\MST_STONE_SHOP.cs" />
+    <Compile Include="UFramework\MST_STONE_SHOP_ARRAY.cs" />
+    <Compile Include="UFramework\MST_SVT.cs" />
+    <Compile Include="UFramework\MST_SVT_ARRAY.cs" />
+    <Compile Include="UFramework\MST_SVT_CARD.cs" />
+    <Compile Include="UFramework\MST_SVT_CARD_ARRAY.cs" />
+    <Compile Include="UFramework\MST_SVT_COMMENT.cs" />
+    <Compile Include="UFramework\MST_SVT_COMMENT_ADD.cs" />
+    <Compile Include="UFramework\MST_SVT_COMMENT_ADD_ARRAY.cs" />
+    <Compile Include="UFramework\MST_SVT_COMMENT_ARRAY.cs" />
+    <Compile Include="UFramework\MST_SVT_EXCEED.cs" />
+    <Compile Include="UFramework\MST_SVT_EXCEED_ARRAY.cs" />
+    <Compile Include="UFramework\MST_SVT_EXP.cs" />
+    <Compile Include="UFramework\MST_SVT_EXP_ARRAY.cs" />
+    <Compile Include="UFramework\MST_SVT_GROUP.cs" />
+    <Compile Include="UFramework\MST_SVT_GROUP_ARRAY.cs" />
+    <Compile Include="UFramework\MST_SVT_LIMIT.cs" />
+    <Compile Include="UFramework\MST_SVT_LIMIT_ADD.cs" />
+    <Compile Include="UFramework\MST_SVT_LIMIT_ADD_ARRAY.cs" />
+    <Compile Include="UFramework\MST_SVT_LIMIT_ARRAY.cs" />
+    <Compile Include="UFramework\MST_SVT_PASSIVE_SKILL.cs" />
+    <Compile Include="UFramework\MST_SVT_PASSIVE_SKILL_ARRAY.cs" />
+    <Compile Include="UFramework\MST_SVT_PROFILE.cs" />
+    <Compile Include="UFramework\MST_SVT_PROFILE_ARRAY.cs" />
+    <Compile Include="UFramework\MST_SVT_RARITY.cs" />
+    <Compile Include="UFramework\MST_SVT_RARITY_ARRAY.cs" />
+    <Compile Include="UFramework\MST_SVT_SCRIPT.cs" />
+    <Compile Include="UFramework\MST_SVT_SCRIPT_ADD.cs" />
+    <Compile Include="UFramework\MST_SVT_SCRIPT_ADD_ARRAY.cs" />
+    <Compile Include="UFramework\MST_SVT_SCRIPT_ARRAY.cs" />
+    <Compile Include="UFramework\MST_SVT_SKILL.cs" />
+    <Compile Include="UFramework\MST_SVT_SKILL_ARRAY.cs" />
+    <Compile Include="UFramework\MST_SVT_TREASURE_DEVICE.cs" />
+    <Compile Include="UFramework\MST_SVT_TREASURE_DEVICE_ARRAY.cs" />
+    <Compile Include="UFramework\MST_SVT_VOICE.cs" />
+    <Compile Include="UFramework\MST_SVT_VOICE_ARRAY.cs" />
+    <Compile Include="UFramework\MST_SVT_VOICE_RELATION.cs" />
+    <Compile Include="UFramework\MST_SVT_VOICE_RELATION_ARRAY.cs" />
+    <Compile Include="UFramework\MST_TIPS.cs" />
+    <Compile Include="UFramework\MST_TIPS_ARRAY.cs" />
+    <Compile Include="UFramework\MST_TOTAL_LOGIN.cs" />
+    <Compile Include="UFramework\MST_TOTAL_LOGIN_ARRAY.cs" />
+    <Compile Include="UFramework\MST_TREASURE_DEVICE.cs" />
+    <Compile Include="UFramework\MST_TREASURE_DEVICE_ARRAY.cs" />
+    <Compile Include="UFramework\MST_TREASURE_DEVICE_DETAIL.cs" />
+    <Compile Include="UFramework\MST_TREASURE_DEVICE_DETAIL_ARRAY.cs" />
+    <Compile Include="UFramework\MST_TREASURE_DEVICE_LV.cs" />
+    <Compile Include="UFramework\MST_TREASURE_DEVICE_LV_ARRAY.cs" />
+    <Compile Include="UFramework\MST_USER_EXP.cs" />
+    <Compile Include="UFramework\MST_USER_EXP_ARRAY.cs" />
+    <Compile Include="UFramework\MST_USER_TREM.cs" />
+    <Compile Include="UFramework\MST_USER_TREM_ARRAY.cs" />
+    <Compile Include="UFramework\MST_VOICE.cs" />
+    <Compile Include="UFramework\MST_VOICE_ARRAY.cs" />
+    <Compile Include="UFramework\MST_VOICE_RELEASE.cs" />
+    <Compile Include="UFramework\MST_VOICE_RELEASE_ARRAY.cs" />
+    <Compile Include="UFramework\MST_WAR.cs" />
+    <Compile Include="UFramework\MST_WAR_ARRAY.cs" />
+    <Compile Include="UFramework\MST_WAR_BGM.cs" />
+    <Compile Include="UFramework\MST_WAR_BGM_ARRAY.cs" />
+    <Compile Include="UFramework\NpcDeckReflection.cs" />
+    <Compile Include="UFramework\NpcFollowerReflection.cs" />
+    <Compile Include="UFramework\NpcSvtDetailReflection.cs" />
+    <Compile Include="UFramework\NpcSvtFollowerReflection.cs" />
+    <Compile Include="UFramework\NpcSvtReflection.cs" />
+    <Compile Include="UFramework\NPC_DECK.cs" />
+    <Compile Include="UFramework\NPC_DECK_ARRAY.cs" />
+    <Compile Include="UFramework\NPC_FOLLOWER.cs" />
+    <Compile Include="UFramework\NPC_FOLLOWER_ARRAY.cs" />
+    <Compile Include="UFramework\NPC_SVT.cs" />
+    <Compile Include="UFramework\NPC_SVT_ARRAY.cs" />
+    <Compile Include="UFramework\NPC_SVT_DETAIL.cs" />
+    <Compile Include="UFramework\NPC_SVT_DETAIL_ARRAY.cs" />
+    <Compile Include="UFramework\NPC_SVT_FOLLOWER.cs" />
+    <Compile Include="UFramework\NPC_SVT_FOLLOWER_ARRAY.cs" />
+    <EmbeddedResource Include="Form1.resx">
+      <DependentUpon>Form1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

@@ -1,0 +1,28 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:prism="clr-namespace:Prism.Mvvm;assembly=Prism.Forms"
+             xmlns:iconize="clr-namespace:Plugin.Iconize;assembly=Plugin.Iconize"
+             prism:ViewModelLocator.AutowireViewModel="True" x:Class="LordCamelot.Views.Login" Title="添加账号">
+    <Frame Padding="3" Margin="3">
+        <StackLayout>
+            <Image Source="icon.png" HeightRequest="48" WidthRequest="48" HorizontalOptions="Center" Margin="0,20,0,0" />
+
+            <StackLayout Orientation="Horizontal" Margin="0,30,0,0">
+                <Entry Placeholder="用户名" Text="{Binding Path=UserName}" HorizontalOptions="FillAndExpand" />
+                <iconize:IconImage Icon="md-details" IconColor="DarkBlue" HeightRequest="24" WidthRequest="24" VerticalOptions="Center">
+                    <iconize:IconImage.GestureRecognizers>
+                        <TapGestureRecognizer Command="{Binding SaveUserCommand}" />
+                    </iconize:IconImage.GestureRecognizers>
+                </iconize:IconImage>
+            </StackLayout>
+            <Entry Placeholder="密码" IsPassword="true" Text="{Binding Path=Password}" />
+            <StackLayout Orientation="Horizontal">
+                <Label Text="iOS" VerticalOptions="Center" Margin="5,0" />
+                <Switch IsToggled="{Binding Path=IOS}" />
+            </StackLayout>
+            <Button Text="添加" Margin="0,10,0,0" BorderRadius="2" Command="{Binding AddCommand}" />
+            <Button Text="全部添加" Margin="0,20,0,0" BorderRadius="2" Command="{Binding AddAllCommand}" />
+        </StackLayout>
+    </Frame>
+</ContentPage>

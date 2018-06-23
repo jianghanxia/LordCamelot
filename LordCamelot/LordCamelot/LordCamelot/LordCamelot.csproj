@@ -1,0 +1,414 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>netstandard2.0</TargetFramework>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <None Remove="Resources\Face\100000.png" />
+    <None Remove="Resources\Face\100001.png" />
+    <None Remove="Resources\Face\1000100.png" />
+    <None Remove="Resources\Face\1000200.png" />
+    <None Remove="Resources\Face\1000300.png" />
+    <None Remove="Resources\Face\100100.png" />
+    <None Remove="Resources\Face\100200.png" />
+    <None Remove="Resources\Face\100300.png" />
+    <None Remove="Resources\Face\100500.png" />
+    <None Remove="Resources\Face\100600.png" />
+    <None Remove="Resources\Face\100700.png" />
+    <None Remove="Resources\Face\100800.png" />
+    <None Remove="Resources\Face\100900.png" />
+    <None Remove="Resources\Face\101000.png" />
+    <None Remove="Resources\Face\101200.png" />
+    <None Remove="Resources\Face\101300.png" />
+    <None Remove="Resources\Face\101400.png" />
+    <None Remove="Resources\Face\101700.png" />
+    <None Remove="Resources\Face\101800.png" />
+    <None Remove="Resources\Face\101900.png" />
+    <None Remove="Resources\Face\102000.png" />
+    <None Remove="Resources\Face\102200.png" />
+    <None Remove="Resources\Face\102600.png" />
+    <None Remove="Resources\Face\102700.png" />
+    <None Remove="Resources\Face\102800.png" />
+    <None Remove="Resources\Face\102900.png" />
+    <None Remove="Resources\Face\103000.png" />
+    <None Remove="Resources\Face\103100.png" />
+    <None Remove="Resources\Face\1100100.png" />
+    <None Remove="Resources\Face\1100200.png" />
+    <None Remove="Resources\Face\1100300.png" />
+    <None Remove="Resources\Face\1100400.png" />
+    <None Remove="Resources\Face\1100500.png" />
+    <None Remove="Resources\Face\1700100.png" />
+    <None Remove="Resources\Face\200100.png" />
+    <None Remove="Resources\Face\200200.png" />
+    <None Remove="Resources\Face\200300.png" />
+    <None Remove="Resources\Face\200500.png" />
+    <None Remove="Resources\Face\200600.png" />
+    <None Remove="Resources\Face\200800.png" />
+    <None Remove="Resources\Face\200900.png" />
+    <None Remove="Resources\Face\201000.png" />
+    <None Remove="Resources\Face\201100.png" />
+    <None Remove="Resources\Face\201200.png" />
+    <None Remove="Resources\Face\201300.png" />
+    <None Remove="Resources\Face\201400.png" />
+    <None Remove="Resources\Face\201500.png" />
+    <None Remove="Resources\Face\201600.png" />
+    <None Remove="Resources\Face\201800.png" />
+    <None Remove="Resources\Face\202000.png" />
+    <None Remove="Resources\Face\202300.png" />
+    <None Remove="Resources\Face\202400.png" />
+    <None Remove="Resources\Face\202500.png" />
+    <None Remove="Resources\Face\202600.png" />
+    <None Remove="Resources\Face\202700.png" />
+    <None Remove="Resources\Face\202800.png" />
+    <None Remove="Resources\Face\2300100.png" />
+    <None Remove="Resources\Face\300100.png" />
+    <None Remove="Resources\Face\300200.png" />
+    <None Remove="Resources\Face\300300.png" />
+    <None Remove="Resources\Face\300400.png" />
+    <None Remove="Resources\Face\300500.png" />
+    <None Remove="Resources\Face\300600.png" />
+    <None Remove="Resources\Face\300700.png" />
+    <None Remove="Resources\Face\300800.png" />
+    <None Remove="Resources\Face\300900.png" />
+    <None Remove="Resources\Face\301000.png" />
+    <None Remove="Resources\Face\301100.png" />
+    <None Remove="Resources\Face\301200.png" />
+    <None Remove="Resources\Face\301300.png" />
+    <None Remove="Resources\Face\301600.png" />
+    <None Remove="Resources\Face\301700.png" />
+    <None Remove="Resources\Face\301900.png" />
+    <None Remove="Resources\Face\302000.png" />
+    <None Remove="Resources\Face\302400.png" />
+    <None Remove="Resources\Face\302500.png" />
+    <None Remove="Resources\Face\302600.png" />
+    <None Remove="Resources\Face\302700.png" />
+    <None Remove="Resources\Face\302800.png" />
+    <None Remove="Resources\Face\302900.png" />
+    <None Remove="Resources\Face\400100.png" />
+    <None Remove="Resources\Face\400200.png" />
+    <None Remove="Resources\Face\400300.png" />
+    <None Remove="Resources\Face\400400.png" />
+    <None Remove="Resources\Face\400600.png" />
+    <None Remove="Resources\Face\400800.png" />
+    <None Remove="Resources\Face\400900.png" />
+    <None Remove="Resources\Face\401100.png" />
+    <None Remove="Resources\Face\401200.png" />
+    <None Remove="Resources\Face\401300.png" />
+    <None Remove="Resources\Face\401330.png" />
+    <None Remove="Resources\Face\401400.png" />
+    <None Remove="Resources\Face\401500.png" />
+    <None Remove="Resources\Face\401700.png" />
+    <None Remove="Resources\Face\401800.png" />
+    <None Remove="Resources\Face\401900.png" />
+    <None Remove="Resources\Face\402200.png" />
+    <None Remove="Resources\Face\402300.png" />
+    <None Remove="Resources\Face\402400.png" />
+    <None Remove="Resources\Face\402500.png" />
+    <None Remove="Resources\Face\402600.png" />
+    <None Remove="Resources\Face\402700.png" />
+    <None Remove="Resources\Face\500100.png" />
+    <None Remove="Resources\Face\500200.png" />
+    <None Remove="Resources\Face\500300.png" />
+    <None Remove="Resources\Face\500400.png" />
+    <None Remove="Resources\Face\500500.png" />
+    <None Remove="Resources\Face\500700.png" />
+    <None Remove="Resources\Face\500800.png" />
+    <None Remove="Resources\Face\500900.png" />
+    <None Remove="Resources\Face\501000.png" />
+    <None Remove="Resources\Face\501100.png" />
+    <None Remove="Resources\Face\501200.png" />
+    <None Remove="Resources\Face\501400.png" />
+    <None Remove="Resources\Face\501500.png" />
+    <None Remove="Resources\Face\501600.png" />
+    <None Remove="Resources\Face\501700.png" />
+    <None Remove="Resources\Face\501800.png" />
+    <None Remove="Resources\Face\501900.png" />
+    <None Remove="Resources\Face\502000.png" />
+    <None Remove="Resources\Face\502100.png" />
+    <None Remove="Resources\Face\502200.png" />
+    <None Remove="Resources\Face\502300.png" />
+    <None Remove="Resources\Face\502500.png" />
+    <None Remove="Resources\Face\502600.png" />
+    <None Remove="Resources\Face\502700.png" />
+    <None Remove="Resources\Face\502800.png" />
+    <None Remove="Resources\Face\503000.png" />
+    <None Remove="Resources\Face\503200.png" />
+    <None Remove="Resources\Face\600100.png" />
+    <None Remove="Resources\Face\600200.png" />
+    <None Remove="Resources\Face\600300.png" />
+    <None Remove="Resources\Face\600500.png" />
+    <None Remove="Resources\Face\600700.png" />
+    <None Remove="Resources\Face\600710.png" />
+    <None Remove="Resources\Face\600800.png" />
+    <None Remove="Resources\Face\600900.png" />
+    <None Remove="Resources\Face\601000.png" />
+    <None Remove="Resources\Face\601100.png" />
+    <None Remove="Resources\Face\601200.png" />
+    <None Remove="Resources\Face\601300.png" />
+    <None Remove="Resources\Face\601400.png" />
+    <None Remove="Resources\Face\601500.png" />
+    <None Remove="Resources\Face\601700.png" />
+    <None Remove="Resources\Face\601800.png" />
+    <None Remove="Resources\Face\601900.png" />
+    <None Remove="Resources\Face\602100.png" />
+    <None Remove="Resources\Face\602300.png" />
+    <None Remove="Resources\Face\602400.png" />
+    <None Remove="Resources\Face\602500.png" />
+    <None Remove="Resources\Face\602600.png" />
+    <None Remove="Resources\Face\602700.png" />
+    <None Remove="Resources\Face\602800.png" />
+    <None Remove="Resources\Face\700100.png" />
+    <None Remove="Resources\Face\700200.png" />
+    <None Remove="Resources\Face\700300.png" />
+    <None Remove="Resources\Face\700400.png" />
+    <None Remove="Resources\Face\700500.png" />
+    <None Remove="Resources\Face\700600.png" />
+    <None Remove="Resources\Face\700700.png" />
+    <None Remove="Resources\Face\700800.png" />
+    <None Remove="Resources\Face\700900.png" />
+    <None Remove="Resources\Face\701000.png" />
+    <None Remove="Resources\Face\701100.png" />
+    <None Remove="Resources\Face\701300.png" />
+    <None Remove="Resources\Face\701400.png" />
+    <None Remove="Resources\Face\701500.png" />
+    <None Remove="Resources\Face\701600.png" />
+    <None Remove="Resources\Face\702000.png" />
+    <None Remove="Resources\Face\702200.png" />
+    <None Remove="Resources\Face\702300.png" />
+    <None Remove="Resources\Face\702400.png" />
+    <None Remove="Resources\Face\702500.png" />
+    <None Remove="Resources\Face\702600.png" />
+    <None Remove="Resources\Face\702700.png" />
+    <None Remove="Resources\Face\702800.png" />
+    <None Remove="Resources\Face\702900.png" />
+    <None Remove="Resources\Face\800100.png" />
+    <None Remove="Resources\Face\800101.png" />
+    <None Remove="Resources\Face\800130.png" />
+    <None Remove="Resources\Face\900100.png" />
+    <None Remove="Resources\Face\900200.png" />
+    <None Remove="Resources\Face\900400.png" />
+    <None Remove="Resources\Face\900500.png" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <EmbeddedResource Include="Resources\Face\100000.png" />
+    <EmbeddedResource Include="Resources\Face\100001.png" />
+    <EmbeddedResource Include="Resources\Face\1000100.png" />
+    <EmbeddedResource Include="Resources\Face\1000200.png" />
+    <EmbeddedResource Include="Resources\Face\1000300.png" />
+    <EmbeddedResource Include="Resources\Face\100100.png" />
+    <EmbeddedResource Include="Resources\Face\100200.png" />
+    <EmbeddedResource Include="Resources\Face\100300.png" />
+    <EmbeddedResource Include="Resources\Face\100500.png" />
+    <EmbeddedResource Include="Resources\Face\100600.png" />
+    <EmbeddedResource Include="Resources\Face\100700.png" />
+    <EmbeddedResource Include="Resources\Face\100800.png" />
+    <EmbeddedResource Include="Resources\Face\100900.png" />
+    <EmbeddedResource Include="Resources\Face\101000.png" />
+    <EmbeddedResource Include="Resources\Face\101200.png" />
+    <EmbeddedResource Include="Resources\Face\101300.png" />
+    <EmbeddedResource Include="Resources\Face\101400.png" />
+    <EmbeddedResource Include="Resources\Face\101700.png" />
+    <EmbeddedResource Include="Resources\Face\101800.png" />
+    <EmbeddedResource Include="Resources\Face\101900.png" />
+    <EmbeddedResource Include="Resources\Face\102000.png" />
+    <EmbeddedResource Include="Resources\Face\102200.png" />
+    <EmbeddedResource Include="Resources\Face\102600.png" />
+    <EmbeddedResource Include="Resources\Face\102700.png" />
+    <EmbeddedResource Include="Resources\Face\102800.png" />
+    <EmbeddedResource Include="Resources\Face\102900.png" />
+    <EmbeddedResource Include="Resources\Face\103000.png" />
+    <EmbeddedResource Include="Resources\Face\103100.png" />
+    <EmbeddedResource Include="Resources\Face\1100100.png" />
+    <EmbeddedResource Include="Resources\Face\1100200.png" />
+    <EmbeddedResource Include="Resources\Face\1100300.png" />
+    <EmbeddedResource Include="Resources\Face\1100400.png" />
+    <EmbeddedResource Include="Resources\Face\1100500.png" />
+    <EmbeddedResource Include="Resources\Face\1700100.png" />
+    <EmbeddedResource Include="Resources\Face\200100.png" />
+    <EmbeddedResource Include="Resources\Face\200200.png" />
+    <EmbeddedResource Include="Resources\Face\200300.png" />
+    <EmbeddedResource Include="Resources\Face\200500.png" />
+    <EmbeddedResource Include="Resources\Face\200600.png" />
+    <EmbeddedResource Include="Resources\Face\200800.png" />
+    <EmbeddedResource Include="Resources\Face\200900.png" />
+    <EmbeddedResource Include="Resources\Face\201000.png" />
+    <EmbeddedResource Include="Resources\Face\201100.png" />
+    <EmbeddedResource Include="Resources\Face\201200.png" />
+    <EmbeddedResource Include="Resources\Face\201300.png" />
+    <EmbeddedResource Include="Resources\Face\201400.png" />
+    <EmbeddedResource Include="Resources\Face\201500.png" />
+    <EmbeddedResource Include="Resources\Face\201600.png" />
+    <EmbeddedResource Include="Resources\Face\201800.png" />
+    <EmbeddedResource Include="Resources\Face\202000.png" />
+    <EmbeddedResource Include="Resources\Face\202300.png" />
+    <EmbeddedResource Include="Resources\Face\202400.png" />
+    <EmbeddedResource Include="Resources\Face\202500.png" />
+    <EmbeddedResource Include="Resources\Face\202600.png" />
+    <EmbeddedResource Include="Resources\Face\202700.png" />
+    <EmbeddedResource Include="Resources\Face\202800.png" />
+    <EmbeddedResource Include="Resources\Face\2300100.png" />
+    <EmbeddedResource Include="Resources\Face\300100.png" />
+    <EmbeddedResource Include="Resources\Face\300200.png" />
+    <EmbeddedResource Include="Resources\Face\300300.png" />
+    <EmbeddedResource Include="Resources\Face\300400.png" />
+    <EmbeddedResource Include="Resources\Face\300500.png" />
+    <EmbeddedResource Include="Resources\Face\300600.png" />
+    <EmbeddedResource Include="Resources\Face\300700.png" />
+    <EmbeddedResource Include="Resources\Face\300800.png" />
+    <EmbeddedResource Include="Resources\Face\300900.png" />
+    <EmbeddedResource Include="Resources\Face\301000.png" />
+    <EmbeddedResource Include="Resources\Face\301100.png" />
+    <EmbeddedResource Include="Resources\Face\301200.png" />
+    <EmbeddedResource Include="Resources\Face\301300.png" />
+    <EmbeddedResource Include="Resources\Face\301600.png" />
+    <EmbeddedResource Include="Resources\Face\301700.png" />
+    <EmbeddedResource Include="Resources\Face\301900.png" />
+    <EmbeddedResource Include="Resources\Face\302000.png" />
+    <EmbeddedResource Include="Resources\Face\302400.png" />
+    <EmbeddedResource Include="Resources\Face\302500.png" />
+    <EmbeddedResource Include="Resources\Face\302600.png" />
+    <EmbeddedResource Include="Resources\Face\302700.png" />
+    <EmbeddedResource Include="Resources\Face\302800.png" />
+    <EmbeddedResource Include="Resources\Face\302900.png" />
+    <EmbeddedResource Include="Resources\Face\400100.png" />
+    <EmbeddedResource Include="Resources\Face\400200.png" />
+    <EmbeddedResource Include="Resources\Face\400300.png" />
+    <EmbeddedResource Include="Resources\Face\400400.png" />
+    <EmbeddedResource Include="Resources\Face\400600.png" />
+    <EmbeddedResource Include="Resources\Face\400800.png" />
+    <EmbeddedResource Include="Resources\Face\400900.png" />
+    <EmbeddedResource Include="Resources\Face\401100.png" />
+    <EmbeddedResource Include="Resources\Face\401200.png" />
+    <EmbeddedResource Include="Resources\Face\401300.png" />
+    <EmbeddedResource Include="Resources\Face\401330.png" />
+    <EmbeddedResource Include="Resources\Face\401400.png" />
+    <EmbeddedResource Include="Resources\Face\401500.png" />
+    <EmbeddedResource Include="Resources\Face\401700.png" />
+    <EmbeddedResource Include="Resources\Face\401800.png" />
+    <EmbeddedResource Include="Resources\Face\401900.png" />
+    <EmbeddedResource Include="Resources\Face\402200.png" />
+    <EmbeddedResource Include="Resources\Face\402300.png" />
+    <EmbeddedResource Include="Resources\Face\402400.png" />
+    <EmbeddedResource Include="Resources\Face\402500.png" />
+    <EmbeddedResource Include="Resources\Face\402600.png" />
+    <EmbeddedResource Include="Resources\Face\402700.png" />
+    <EmbeddedResource Include="Resources\Face\500100.png" />
+    <EmbeddedResource Include="Resources\Face\500200.png" />
+    <EmbeddedResource Include="Resources\Face\500300.png" />
+    <EmbeddedResource Include="Resources\Face\500400.png" />
+    <EmbeddedResource Include="Resources\Face\500500.png" />
+    <EmbeddedResource Include="Resources\Face\500700.png" />
+    <EmbeddedResource Include="Resources\Face\500800.png" />
+    <EmbeddedResource Include="Resources\Face\500900.png" />
+    <EmbeddedResource Include="Resources\Face\501000.png" />
+    <EmbeddedResource Include="Resources\Face\501100.png" />
+    <EmbeddedResource Include="Resources\Face\501200.png" />
+    <EmbeddedResource Include="Resources\Face\501400.png" />
+    <EmbeddedResource Include="Resources\Face\501500.png" />
+    <EmbeddedResource Include="Resources\Face\501600.png" />
+    <EmbeddedResource Include="Resources\Face\501700.png" />
+    <EmbeddedResource Include="Resources\Face\501800.png" />
+    <EmbeddedResource Include="Resources\Face\501900.png" />
+    <EmbeddedResource Include="Resources\Face\502000.png" />
+    <EmbeddedResource Include="Resources\Face\502100.png" />
+    <EmbeddedResource Include="Resources\Face\502200.png" />
+    <EmbeddedResource Include="Resources\Face\502300.png" />
+    <EmbeddedResource Include="Resources\Face\502500.png" />
+    <EmbeddedResource Include="Resources\Face\502600.png" />
+    <EmbeddedResource Include="Resources\Face\502700.png" />
+    <EmbeddedResource Include="Resources\Face\502800.png" />
+    <EmbeddedResource Include="Resources\Face\503000.png" />
+    <EmbeddedResource Include="Resources\Face\503200.png" />
+    <EmbeddedResource Include="Resources\Face\600100.png" />
+    <EmbeddedResource Include="Resources\Face\600200.png" />
+    <EmbeddedResource Include="Resources\Face\600300.png" />
+    <EmbeddedResource Include="Resources\Face\600500.png" />
+    <EmbeddedResource Include="Resources\Face\600700.png" />
+    <EmbeddedResource Include="Resources\Face\600710.png" />
+    <EmbeddedResource Include="Resources\Face\600800.png" />
+    <EmbeddedResource Include="Resources\Face\600900.png" />
+    <EmbeddedResource Include="Resources\Face\601000.png" />
+    <EmbeddedResource Include="Resources\Face\601100.png" />
+    <EmbeddedResource Include="Resources\Face\601200.png" />
+    <EmbeddedResource Include="Resources\Face\601300.png" />
+    <EmbeddedResource Include="Resources\Face\601400.png" />
+    <EmbeddedResource Include="Resources\Face\601500.png" />
+    <EmbeddedResource Include="Resources\Face\601700.png" />
+    <EmbeddedResource Include="Resources\Face\601800.png" />
+    <EmbeddedResource Include="Resources\Face\601900.png" />
+    <EmbeddedResource Include="Resources\Face\602100.png" />
+    <EmbeddedResource Include="Resources\Face\602300.png" />
+    <EmbeddedResource Include="Resources\Face\602400.png" />
+    <EmbeddedResource Include="Resources\Face\602500.png" />
+    <EmbeddedResource Include="Resources\Face\602600.png" />
+    <EmbeddedResource Include="Resources\Face\602700.png" />
+    <EmbeddedResource Include="Resources\Face\602800.png" />
+    <EmbeddedResource Include="Resources\Face\700100.png" />
+    <EmbeddedResource Include="Resources\Face\700200.png" />
+    <EmbeddedResource Include="Resources\Face\700300.png" />
+    <EmbeddedResource Include="Resources\Face\700400.png" />
+    <EmbeddedResource Include="Resources\Face\700500.png" />
+    <EmbeddedResource Include="Resources\Face\700600.png" />
+    <EmbeddedResource Include="Resources\Face\700700.png" />
+    <EmbeddedResource Include="Resources\Face\700800.png" />
+    <EmbeddedResource Include="Resources\Face\700900.png" />
+    <EmbeddedResource Include="Resources\Face\701000.png" />
+    <EmbeddedResource Include="Resources\Face\701100.png" />
+    <EmbeddedResource Include="Resources\Face\701300.png" />
+    <EmbeddedResource Include="Resources\Face\701400.png" />
+    <EmbeddedResource Include="Resources\Face\701500.png" />
+    <EmbeddedResource Include="Resources\Face\701600.png" />
+    <EmbeddedResource Include="Resources\Face\702000.png" />
+    <EmbeddedResource Include="Resources\Face\702200.png" />
+    <EmbeddedResource Include="Resources\Face\702300.png" />
+    <EmbeddedResource Include="Resources\Face\702400.png" />
+    <EmbeddedResource Include="Resources\Face\702500.png" />
+    <EmbeddedResource Include="Resources\Face\702600.png" />
+    <EmbeddedResource Include="Resources\Face\702700.png" />
+    <EmbeddedResource Include="Resources\Face\702800.png" />
+    <EmbeddedResource Include="Resources\Face\702900.png" />
+    <EmbeddedResource Include="Resources\Face\800100.png" />
+    <EmbeddedResource Include="Resources\Face\800101.png" />
+    <EmbeddedResource Include="Resources\Face\800130.png" />
+    <EmbeddedResource Include="Resources\Face\900100.png" />
+    <EmbeddedResource Include="Resources\Face\900200.png" />
+    <EmbeddedResource Include="Resources\Face\900400.png" />
+    <EmbeddedResource Include="Resources\Face\900500.png" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="DLToolkit.Forms.Controls.FlowListView" Version="2.0.10" />
+    <PackageReference Include="LiteDB" Version="4.1.2" />
+    <PackageReference Include="Newtonsoft.Json" Version="11.0.2" />
+    <PackageReference Include="Portable.BouncyCastle" Version="1.8.2" />
+    <PackageReference Include="Prism.Unity.Forms" Version="7.0.0.396" />
+    <PackageReference Include="PropertyChanged.Fody" Version="2.5.6" />
+    <PackageReference Include="protobuf-net" Version="2.3.7" />
+    <PackageReference Include="SharpZipLib.NETStandard" Version="1.0.7" />
+    <PackageReference Include="Syncfusion.Xamarin.SfListView" Version="16.1.0.37" />
+    <PackageReference Include="Syncfusion.Xamarin.SfNumericUpDown" Version="16.1.0.37" />
+    <PackageReference Include="Syncfusion.Xamarin.SfRangeSlider" Version="16.1.0.37" />
+    <PackageReference Include="Xam.Plugin.Iconize.Material" Version="3.0.0.66" />
+    <PackageReference Include="Xamarin.Forms" Version="3.0.0.482510" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Compile Condition=" '$(EnableDefaultCompileItems)' == 'true' " Update="App.xaml.cs">
+      <DependentUpon>*.xaml</DependentUpon>
+    </Compile>
+    <Compile Update="Views\Login.xaml.cs">
+      <DependentUpon>Login.xaml</DependentUpon>
+    </Compile>
+  </ItemGroup>
+
+  <ItemGroup>
+    <EmbeddedResource Update="Views\Login.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </EmbeddedResource>
+    <EmbeddedResource Update="Views\Main.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </EmbeddedResource>
+  </ItemGroup>
+</Project>
